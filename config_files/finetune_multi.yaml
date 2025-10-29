@@ -1,0 +1,32 @@
+experiment:
+  name: finetune_multilingual_mbert
+  output_dir: results/multilingual/
+  seed: 42
+
+dataset:
+  train_file: data/multilingual_train.tsv
+  validation_file: data/multilingual_valid.tsv
+  text_column: lyrics
+  label_column: genre
+  delimiter: "\t"
+
+model:
+  name_or_path: distilbert-base-multilingual-cased
+  task_type: hf_text_classification
+  num_labels: TBD #update when number of genres are known
+
+training:
+  batch_size: 16. #"safe default” for BERT/DistilBERT fine-tuning
+  learning_rate: 5e-5 #upper range learning weight
+  num_train_epochs: 3 #number of full passes
+  max_seq_length: 256 #increase if lyrics get truncated - mac num of tokens per sample
+  warmup_steps: 500
+  evaluation_strategy: epoch
+  save_total_limit: 2
+  fp16: true
+
+#info source: 
+#https://medium.com/%40heyamit10/fine-tuning-bert-for-classification-a-practical-guide-b8c1c56f252c
+
+evaluation:
+  metrics: ["accuracy"]

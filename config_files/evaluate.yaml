@@ -1,0 +1,16 @@
+experiment:
+  name: evaluate_mbert
+  output_dir: results/eval/
+  seed: 42
+
+dataset:
+  test_file: data/test.tsv
+  delimiter: "\t"
+
+model:
+  checkpoint_dir: results/multilingual/checkpoint-best
+  task_type: hf_text_classification
+
+evaluation:
+  metrics: ["accuracy", "f1"]
+  output_confusion_matrix: true
