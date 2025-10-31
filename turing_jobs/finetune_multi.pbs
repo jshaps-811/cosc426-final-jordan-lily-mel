@@ -1,0 +1,18 @@
+#!/bin/bash
+#PBS -N finetune_multilingual
+#PBS -q workq
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=08:00:00
+#PBS -l mem=8gb
+#PBS -o localhost:$HOME/NLPScholar/final/logs/finetune_multilingual.out
+#PBS -e localhost:$HOME/NLPScholar/final/logs/finetune_multilingual.err
+#PBS -m bae
+#PBS -M mxgonzalez@colgate.edu
+#PBS -V
+
+cd $PBS_O_WORKDIR
+cd $HOME/NLPScholar/final
+
+source /local/JupyterHub/bin/activate && conda activate nlp
+
+python /home/NLPScholar/main.py config_files/finetune_multilingual.yaml
