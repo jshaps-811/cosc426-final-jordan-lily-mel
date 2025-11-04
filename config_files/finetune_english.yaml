@@ -14,3 +14,6 @@ validfpath: ../norm_data/en_validate_filtered.tsv
 modelfpath: ../en_model
 
 loadPretrained: True
+
+
+#Labeltoid
