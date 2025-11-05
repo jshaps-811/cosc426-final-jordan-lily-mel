@@ -1,0 +1,13 @@
+exp: MinimalPair
+
+device: cuda
+
+mode:
+  - evaluate
+
+models:
+  hf_masked_model:
+  - google-bert/bert-base-multilingual-cased
+
+datafpath: "~/final/norm_data/pt_perplex_test.tsv"
+predfpath: "~/final/predictions/pt-mbert-perplex.tsv"

@@ -1,0 +1,14 @@
+exp: MinimalPair
+
+device: mps
+
+mode:
+  - evaluate
+
+models:
+  hf_masked_model:
+  - google-bert/bert-base-multilingual-cased
+
+
+datafpath: "/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/norm_data/en_perplex_test.tsv"
+predfpath: "/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/predictions/en-mbert-perplexity.tsv"
