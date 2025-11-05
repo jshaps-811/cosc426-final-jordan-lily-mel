@@ -1,0 +1,11 @@
+exp: MinimalPair
+
+mode:
+  - evaluate
+
+models:
+  hf_masked_model:
+  - google-bert/bert-base-multilingual-cased
+
+datafpath: ../norm_data/train_perplex.tsv
+predfpath: ../predictions/mbert-performance.tsv
