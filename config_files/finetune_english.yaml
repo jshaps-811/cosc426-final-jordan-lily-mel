@@ -15,5 +15,14 @@ modelfpath: ../en_model
 
 loadPretrained: True
 
-
-#Labeltoid
+id2label:
+    0: Rock
+    1: Pop
+    2: Metal
+    3: Indie
+    4: Country
+    5: Folk
+    6: Jazz
+    7: R&B
+    8: Electronic
+    
