@@ -1,0 +1,27 @@
+exp: TextClassification
+
+device: cpu
+
+mode: 
+    - train
+
+models:
+    hf_text_classification_model:
+      - google-bert/bert-base-multilingual-cased
+
+trainfpath: /Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/norm_data/pt_training_data.tsv
+
+validfpath: /Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/norm_data/pt_validation_data.tsv
+
+modelfpath: /Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/pt_model
+
+loadPretrained: True
+
+id2label:
+    0: "Indie"
+    1: "Folk"
+    2: "Pop"
+    3: "Metal"
+    4: "Rock"
+
+    
