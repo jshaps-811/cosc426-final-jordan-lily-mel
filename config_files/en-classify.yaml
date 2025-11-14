@@ -1,0 +1,26 @@
+exp: TextClassification
+
+mode: 
+    - evaluate
+    - analyze
+
+models:
+    hf_text_classification_model:
+      - /Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/en_model
+      - /Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/pt_model
+
+predfpath: /Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/predictions/en_class_preds.tsv
+
+datafpath: /Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/test_data/en_class_test.tsv
+
+resultsfpath: /Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/results/en_genres.tsv
+
+id2label:
+    0: "Indie"
+    1: "Folk"
+    2: "Pop"
+    3: "Metal"
+    4: "Rock"
+
+save: by_cond, by_target
+
