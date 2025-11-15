@@ -1,7 +1,5 @@
 exp: MinimalPair
 
-device: cuda
-
 mode:
   - evaluate
 

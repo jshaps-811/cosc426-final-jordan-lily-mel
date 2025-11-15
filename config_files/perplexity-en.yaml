@@ -1,7 +1,5 @@
 exp: MinimalPair
 
-device: mps
-
 mode:
   - evaluate
 

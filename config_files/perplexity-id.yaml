@@ -7,5 +7,5 @@ models:
   hf_masked_model:
   - google-bert/bert-base-multilingual-cased
 
-datafpath: "~/final/norm_data/es_perplex_test.tsv"
-predfpath: "~/final/predictions/es-mbert-perplex.tsv"
+datafpath: "~/final/norm_data/id_perplex_test.tsv"
+predfpath: "~/final/predictions/id-mbert-perplex.tsv"
