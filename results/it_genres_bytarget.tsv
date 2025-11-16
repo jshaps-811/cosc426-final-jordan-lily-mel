@@ -1,0 +1,11 @@
+	model	target_class	precision	recall	f1
+0	/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/en_model	Folk	0.034482758620689655	1.0	0.06666666666666667
+1	/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/en_model	Indie	0.024390243902439025	0.1111111111111111	0.04
+2	/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/en_model	Metal	0.0	0.0	0.0
+3	/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/en_model	Pop	0.125	0.04	0.06060606060606061
+4	/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/en_model	Rock	0.17647058823529413	0.06	0.08955223880597014
+5	/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/pt_model	Folk	0.0	0.0	0.0
+6	/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/pt_model	Indie	0.0	0.0	0.0
+7	/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/pt_model	Metal	0.10569105691056911	1.0	0.19117647058823528
+8	/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/pt_model	Pop	0.0	0.0	0.0
+9	/Users/jordanshaps/Desktop/CS426/cosc426-final-jordan-lily-mel/models/pt_model	Rock	0.0	0.0	0.0
