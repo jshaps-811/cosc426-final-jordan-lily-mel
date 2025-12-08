@@ -7,7 +7,6 @@ The sequence of steps to go from dataset to sample .tsv files is as follows:
 - Lastly, we will split these two modified train files into a 90:10 split so that we have two train and two validate .tsv files.
 
 To get from the output of NLPScholar to our evaluation metrics table and figures: 
-- Use the output tsv file from NLPScholar to compare the predicted genre with the target genre.
-- Organize these individual predictions (accurate or not) by language and by genre.
-- Create a table that displays the accuracies organized first by language and then by genre.
-- Create a matrix that has each language as rows, and each genre as columns, and displays the accuracy for each cross section. We can also have an overall accuracy for each row/ column.
+- Use the output tsv file from NLPScholar to obtain the accuracies for each language by target class
+- Create an aggregated bar chart that groups each genre and displays bars for each language with accuracies on the y-axis to display each fine-tuned models' performance.
+- Create a scatter plot that maps base model perplexity against finetuned model accuracy for each language.
