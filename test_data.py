@@ -9,11 +9,11 @@ Created on Fri Nov 14 16:33:23 2025
 import os
 import pandas as pd
 
-def test_data(in_folder, out_folder, max_per_genre=10):
+def test_data(in_folder, out_folder, max_per_genre=50):
     if not os.path.exists(out_folder):
         os.makedirs(out_folder)
 
-    allowed_language = "ro"
+    allowed_language = "fr"
     allowed_genres = ["Indie", "Folk", "Pop", "Metal", "Rock"]
 
     for fname in os.listdir(in_folder):
@@ -22,16 +22,20 @@ def test_data(in_folder, out_folder, max_per_genre=10):
 
         csv_fpath = os.path.join(in_folder, fname)
         df = pd.read_csv(csv_fpath)
+        
+        
 
         # Skip rows whose lyrics contain certain tokens
         df = df[
             ~df["Lyrics"].str.contains("Instrumental", case=False, na=False) &
             ~df["Lyrics"].str.contains("–", na=False) &
-            ~df["Lyrics"].str.contains("-", na=False) &
-            ~df["Lyrics"].str.contains("fuck", case=False, na=False) &
-            ~df["Lyrics"].str.contains("sex", case=False, na=False) &
-            ~df["Lyrics"].str.contains("Lyrics", case=False, na=False)
+            ~df["Lyrics"].str.contains(":", na=False) &
+            ~df["Lyrics"].str.contains("Lyrics", case=False, na=False) 
         ]
+        
+        # Remove empty lines
+        df = df[df["Lyrics"].notna()]
+        df = df[df["Lyrics"].str.strip() != ""] 
 
         # Filter by allowed language and genres
         df = df[
@@ -68,7 +72,7 @@ def test_data(in_folder, out_folder, max_per_genre=10):
         })
 
         class_df = pd.DataFrame({
-            "sentid": list(range(1, len(limited) + 1)),
+            "textid": list(range(1, len(limited) + 1)),
             "text": texts,
             "target": genres
         })
